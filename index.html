@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KasukiDev - Portfolio</title>
+  <meta name="description" content="KasukiDev's Development Portfolio" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <b>Kasuki Development</b>
+      </a>
+      <div class="nav-cta">
+        <a class="btn btn-ghost active" href="index.html" title="Home">
+          <img src="icons/home.png" alt="Home" />
+        </a>
+        <a class="btn btn-ghost" href="skills.html" title="Skills">
+          <img src="icons/skills.png" alt="Skills" />
+        </a>
+        <a class="btn btn-ghost" href="projects.html" title="Projects">
+          <img src="icons/project.png" alt="Projects" />
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="portfolio-header fade-in-section">
+    <h1>Kasuki Development</h1>
+    <p>
+      Creating high-performance <strong>Java</strong> and 
+      <strong>Lua Projects</strong> that bring games and ideas to life.
+    </p>
+    <a href="skills.html" class="hero-cta">View More</a>
+  </header>
+
+  <div class="section-divider"></div>
+
+  <!-- Projects Section -->
+  <section class="portfolio-section fade-in-section" id="projects">
+    <h1 class="section-title">Featured Projects</h1>
+    <div class="slider-container">
+      <div class="slider-track"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section fade-in-section">
+    <h1 class="section-title">Hi, I’m Kasuki 👋</h1>
+    <p>
+      I’m a passionate developer building <b>Java</b> and 
+      <b>Lua projects</b> that power creative experiences.  
+      I love working on projects that push performance and bring fun ideas to life.
+    </p>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section class="portfolio-section fade-in-section" id="contact">
+    <h2 class="section-title">Let’s Work Together</h2>
+    <p class="contact-text">I’d love to hear about your project or ideas.</p>
+    <div class="contact-links">
+      <a href="https://discord.com/users/390666085763907584" target="_blank" class="contact-btn discord">
+        <img src="icons/skills/discord.svg" alt="Discord"/> Message on Discord
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="portfolio-footer">
+    <span class="brand-footer">
+      <span class="brand-mark"></span> Kasuki Development
+    </span>
+    <div class="footer-links">
+      <a href="#projects">Projects</a> | 
+      <a href="#contact">Contact</a>
+    </div>
+    <p>&copy; <span id="year"></span> KasukiDev — All rights reserved.</p>
+  </footer>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal-backdrop" style="display:none;">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div id="modal-details"></div>
+      <img id="modal-image" src="" alt="Project Image" />
+    </div>
+  </div>
+
+  <script src="js/home.js"></script>
+  <script src="js/fade.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

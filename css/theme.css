@@ -1,0 +1,272 @@
+/* ===========================
+   Base Theme
+=========================== */
+body {
+  background: radial-gradient(ellipse at 60% 20%, #23203a 0%, #181522 60%, #0c0d13 100%);
+  color: #e6e6f0;
+  font-family: "Outfit", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  color: #f2c94c;
+  margin: 0 0 16px;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+p {
+  color: #cfcfe6;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+.nav {
+  background: rgba(24,21,34,0.95);
+  box-shadow: 0 2px 16px rgba(60,40,120,0.12);
+  border-bottom: 1px solid #23203a;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+.brand {
+  color: #f2c94c;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-mark {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #5ddd13 60%, #5ddd13 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 12px #f2c94c88;
+}
+
+/* CTA buttons in nav */
+.nav-cta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav-cta a.btn {
+  min-width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(242,201,76,0.18);
+  background: rgba(36,32,54,0.65);
+  box-shadow: 0 4px 24px rgba(60,40,120,0.1),
+              0 1.5px 8px rgba(242,201,76,0.08);
+  backdrop-filter: blur(8px);
+  transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+}
+
+.nav-cta a.btn img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(1.1) drop-shadow(0 1px 2px #18152244);
+}
+
+.nav-cta a.btn:hover {
+  background: #f2c94c;
+  transform: scale(1.06);
+  box-shadow: 0 6px 32px rgba(242,201,76,0.18), 0 2px 12px rgba(60,40,120,0.12);
+}
+
+.nav-cta a.btn.active {
+  background: #f2c94c;
+  transform: scale(1.06);
+  box-shadow: 0 6px 32px rgba(242,201,76,0.18), 0 2px 12px rgba(60,40,120,0.12);
+}
+
+.nav-cta a.btn.active img {
+  filter: brightness(0) invert(1);
+}
+
+
+/* ===========================
+   Hero Section
+=========================== */
+.hero {
+  text-align: center;
+  padding: 120px 20px 100px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #d8d8e6;
+  margin-bottom: 32px;
+}
+
+.hero .btn-primary {
+  background: #f2c94c;
+  color: #23203a !important;
+  border: 2px solid #f2c94c;
+  padding: 12px 26px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero .btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 32px rgba(242,201,76,0.25), 0 3px 12px rgba(36,32,54,0.3);
+}
+
+/* ===========================
+   Section Styling
+=========================== */
+section {
+  padding: 100px 20px;
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: url("divider-wave.svg") no-repeat center bottom;
+  background-size: cover;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* ===========================
+   Project Cards
+=========================== */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.project-card {
+  background: rgba(36,32,54,0.6);
+  border: 1px solid rgba(242,201,76,0.15);
+  box-shadow: 0 4px 24px rgba(60,40,120,0.15),
+              0 2px 8px rgba(242,201,76,0.08);
+  border-radius: 16px;
+  padding: 28px 24px;
+  transition: transform 0.25s, box-shadow 0.25s;
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 32px rgba(242,201,76,0.25),
+              0 3px 12px rgba(60,40,120,0.15);
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f2c94c;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #cfcfe6;
+}
+
+.project-card .btn {
+  display: inline-block;
+  background: #f2c94c;
+  color: #23203a !important;
+  border: 2px solid #f2c94c;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 32px rgba(242,201,76,0.25),
+              0 3px 12px rgba(36,32,54,0.3);
+}
+
+/* ===========================
+   Contact Section
+=========================== */
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  display: inline-block;
+  background: rgba(36,32,54,0.6);
+  border: 1px solid rgba(242,201,76,0.15);
+  padding: 14px 24px;
+  border-radius: 14px;
+  font-weight: 600;
+  color: #f2c94c;
+  text-decoration: none;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.contact a:hover {
+  background: #f2c94c;
+  color: #23203a;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.85rem;
+  color: #9a9ab5;
+}
+
+/* Fade */
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.fade-in-section.active {
+  opacity: 1;
+}

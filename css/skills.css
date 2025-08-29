@@ -1,0 +1,134 @@
+.skills-header {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #f2c94c;
+  text-shadow: 0 5px 30px rgba(242,201,76,.2);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.portfolio-section#skills {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 48px 0 32px 0;
+	text-align: center;
+}
+.skills-category {
+	margin-bottom: 56px;
+}
+
+/* Category Titles */
+.skills-category-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 28px;
+  text-align: center;
+  letter-spacing: 1px;
+  padding-bottom: 6px;
+
+  color: #f2c94c;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+
+  border-bottom: 2px solid rgba(255,255,255,0.08);
+  text-shadow: 0 5px 30px rgba(242,201,76,.2);
+}
+
+.skills-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px 32px;
+	justify-content: center;
+	margin-bottom: 24px;
+}
+.skill-card {
+	background: linear-gradient(120deg, #23203a 70%, #181522 100%);
+	border-radius: 18px;
+	box-shadow: 0 8px 32px rgba(60,40,120,0.16);
+	padding: 32px 24px 24px 24px;
+	width: 220px;
+	min-height: 180px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: box-shadow 0.22s, transform 0.22s, border-color 0.22s;
+	border: 1.5px solid #2e294e;
+	font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+	position: relative;
+	overflow: hidden;
+}
+.skill-card:hover {
+	box-shadow: 0 16px 48px rgba(60,40,120,0.22);
+	transform: translateY(-8px) scale(1.05);
+	border-color: #f2c94c;
+}
+.skill-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #f2c94c;
+  margin-top: 5px;
+  margin-bottom: 6px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.skill-desc {
+	color: #bdb8e3;
+	font-size: 1.02rem;
+	text-align: center;
+	margin-bottom: 0;
+}
+.skill-icon {
+		width: 64px;
+		height: 64px;
+		margin-bottom: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0;
+		background: none;
+		box-shadow: none;
+}
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #1da1f2;
+  -webkit-mask: center/contain no-repeat;
+  mask: center/contain no-repeat;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon.maven       { -webkit-mask-image: url('../icons/skills/apachemaven.svg'); mask-image: url('../icons/skills/apachemaven.svg'); }
+.skill-icon.git         { -webkit-mask-image: url('../icons/skills/git.svg'); mask-image: url('../icons/skills/git.svg'); }
+.skill-icon.gradle      { -webkit-mask-image: url('../icons/skills/gradle.svg'); mask-image: url('../icons/skills/gradle.svg'); }
+
+.skill-icon.luau        { -webkit-mask-image: url('../icons/skills/luau.svg'); mask-image: url('../icons/skills/luau.svg'); }
+.skill-icon.python      { -webkit-mask-image: url('../icons/skills/python.svg'); mask-image: url('../icons/skills/python.svg'); }
+.skill-icon.java        { -webkit-mask-image: url('../icons/skills/java.svg'); mask-image: url('../icons/skills/java.svg'); }
+
+.skill-icon.sql         { -webkit-mask-image: url('../icons/skills/mysql.svg'); mask-image: url('../icons/skills/mysql.svg'); }
+.skill-icon.redis       { -webkit-mask-image: url('../icons/skills/redis.svg'); mask-image: url('../icons/skills/redis.svg'); }
+.skill-icon.protobuf    { -webkit-mask-image: url('../icons/skills/buffer.svg'); mask-image: url('../icons/skills/buffer.svg'); }
+.skill-icon.mongo       { -webkit-mask-image: url('../icons/skills/mongodb.svg'); mask-image: url('../icons/skills/mongodb.svg'); }
+
+.skill-icon.spigot      { -webkit-mask-image: url('../icons/skills/spigotmc.svg'); mask-image: url('../icons/skills/spigotmc.svg'); }
+.skill-icon.jda         { -webkit-mask-image: url('../icons/skills/discord.svg'); mask-image: url('../icons/skills/discord.svg'); }
+.skill-icon.profilestore { -webkit-mask-image: url('../icons/skills/storage.svg'); mask-image: url('../icons/skills/storage.svg'); }
+.skill-icon.bytenet     { -webkit-mask-image: url('../icons/skills/router.svg'); mask-image: url('../icons/skills/router.svg'); }
+
+.skill-icon.aws         { -webkit-mask-image: url('../icons/skills/aws.svg'); mask-image: url('../icons/skills/aws.svg'); }
+.skill-icon.cicd        { -webkit-mask-image: url('../icons/skills/docker.svg'); mask-image: url('../icons/skills/docker.svg'); }
+
+
+
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+.fade-in-section.active {
+  opacity: 1;
+}
